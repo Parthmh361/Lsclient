@@ -130,7 +130,7 @@ const AdvocateSignUp = () => {
 
     // Submit form if password is valid
     try {
-      const res = await fetch("http://localhost:5000/api/createadvocate", {
+      const res = await fetch("https://lsserver-2.onrender.com/api/createadvocate", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

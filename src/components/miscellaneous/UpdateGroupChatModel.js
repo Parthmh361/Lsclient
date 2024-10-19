@@ -40,7 +40,7 @@ const UpdateGroupChatModel = ({FetchAgain,setFetchAgain,fetchMessages}) => {
         }
         try {
             setLoading(true)
-            const res = await fetch(`http://localhost:5000/api/chat/groupremove`,{
+            const res = await fetch(`https://lsserver-2.onrender.com/api/chat/groupremove`,{
                 method:"PUT",
                 headers:{
                     "Content-Type":"application/json",
@@ -72,7 +72,7 @@ const UpdateGroupChatModel = ({FetchAgain,setFetchAgain,fetchMessages}) => {
     if(!groupChatName) return
      try {
         setRenameLoading(true)
-        const res = await fetch(`http://localhost:5000/api/chat/rename`,{
+        const res = await fetch(`https://lsserver-2.onrender.com/api/chat/rename`,{
             method:"PUT",
             headers:{
                 "Content-Type":"application/json",
@@ -108,7 +108,7 @@ const UpdateGroupChatModel = ({FetchAgain,setFetchAgain,fetchMessages}) => {
         }
         try {
             setLoading(true)
-            const res = await fetch(`http://localhost:5000/api/chatusers?search=${Search}`,{
+            const res = await fetch(`https://lsserver-2.onrender.com/api/chatusers?search=${Search}`,{
                 method:"GET",
                 headers:{
                     Authorization:`Bearer ${User.token}`
@@ -152,7 +152,7 @@ const UpdateGroupChatModel = ({FetchAgain,setFetchAgain,fetchMessages}) => {
         }
         try {
             setLoading(true)
-            const res = await fetch(`http://localhost:5000/api/chat/groupadd`,{
+            const res = await fetch(`https://lsserver-2.onrender.com/api/chat/groupadd`,{
                 method:"PUT",
                 headers:{
                     "Content-Type":"application/json",

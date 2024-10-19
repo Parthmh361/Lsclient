@@ -41,7 +41,7 @@ const AddClient = () => {
         password: formData.password,
       }
       // Replace with your actual API endpoint
-      const res = await fetch("http://localhost:5000/api/addclient", {
+      const res = await fetch("https://lsserver-2.onrender.com/api/addclient", {
         method: "POST",
         headers: {
           'Content-type': 'application/json',

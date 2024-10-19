@@ -58,7 +58,7 @@ const SideDrawer = () => {
 
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:5000/api/chatusers?search=${Search}`, {
+      const res = await fetch(`https://lsserver-2.onrender.com/api/chatusers?search=${Search}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${User.token}`,
@@ -82,7 +82,7 @@ const SideDrawer = () => {
   const accessChat = async (userId) => {
     try {
       setLoadingChat(true);
-      const res = await fetch(`http://localhost:5000/api/chat/accesschat`, {
+      const res = await fetch(`https://lsserver-2.onrender.com/api/chat/accesschat`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',

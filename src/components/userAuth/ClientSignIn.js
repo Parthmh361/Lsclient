@@ -30,7 +30,7 @@ const ClientSignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/api/clientsignin", {
+      const res = await fetch("https://lsserver-2.onrender.com/api/clientsignin", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

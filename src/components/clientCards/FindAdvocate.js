@@ -11,7 +11,7 @@ async function serchAdvocate(e){
     e.preventDefault();
     setSearch(e.target.value);
     try {
-        const res = await fetch(`http://localhost:5000/api/findadvocate?search=${search}`, {
+        const res = await fetch(`https://lsserver-2.onrender.com/api/findadvocate?search=${search}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${User.token}`,

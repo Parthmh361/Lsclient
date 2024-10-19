@@ -26,7 +26,7 @@ const AdvocateDashboard = () => {
     try{
         const userInfo = JSON.parse(localStorage.getItem("User"));
         const token = userInfo.token;
-        const res = await fetch("http://localhost:5000/api/advocateauth", {
+        const res = await fetch("https://lsserver-2.onrender.com/api/advocateauth", {
            method: "GET",
            headers: {
              Authorization: `Bearer ${token}`

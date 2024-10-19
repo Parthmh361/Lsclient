@@ -28,7 +28,7 @@ const AdvocateSignIn = () => {
   async function handleSubmit(e){
     e.preventDefault();
     try {
-        const res = await fetch("http://localhost:5000/api/advocatesignin", {
+        const res = await fetch("https://lsserver-2.onrender.com/api/advocatesignin", {
           method: "POST",
           headers: {
             "Content-type": "application/json",

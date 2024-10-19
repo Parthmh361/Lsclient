@@ -13,7 +13,7 @@ const MyChats = ({ FetchAgain }) => {
 
   const fetchChats = async (token) => {
     try {
-      const res = await fetch('http://localhost:5000/api/chat/fetchchat', {
+      const res = await fetch('https://lsserver-2.onrender.com/api/chat/fetchchat', {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`

@@ -8,7 +8,7 @@ import UpdateGroupChatModel from './miscellaneous/UpdateGroupChatModel';
 import ScrollableChat from './ScrollableChat';
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://lsserver-2.onrender.com";
 var socket , selectedChatCompare;
 const SingleChat = ({FetchAgain,setFetchAgain}) => {
     
@@ -53,7 +53,7 @@ const SingleChat = ({FetchAgain,setFetchAgain}) => {
            if(event.key === 'Enter' && newMessage){
             socket.emit('stop typing',SelectedChat._id)
               try {
-                const res = await fetch ("http://localhost:5000/api/message/",{
+                const res = await fetch ("https://lsserver-2.onrender.com/api/message/",{
                     method:"POST",
                     headers:{
                         "Content-Type":"application/json",
@@ -85,7 +85,7 @@ const SingleChat = ({FetchAgain,setFetchAgain}) => {
         if(!SelectedChat) return;
         try {
             setLoading(true);
-            const res = await fetch(`http://localhost:5000/api/message/${SelectedChat._id}`,{
+            const res = await fetch(`https://lsserver-2.onrender.com/api/message/${SelectedChat._id}`,{
                 method:"GET",
                 headers:{
                     Authorization:`Bearer ${User.token}`

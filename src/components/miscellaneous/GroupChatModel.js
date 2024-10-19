@@ -31,7 +31,7 @@ const GroupChatModel = ({children}) => {
       }
       try{
         setLoading(true)
-        const res = await fetch(`http://localhost:5000/api/chatusers?search=${Search}`, {
+        const res = await fetch(`https://lsserver-2.onrender.com/api/chatusers?search=${Search}`, {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${User.token}`
@@ -64,7 +64,7 @@ const GroupChatModel = ({children}) => {
             return;
           }
           try{
-            const res = await fetch(`http://localhost:5000/api/chat/group`, {
+            const res = await fetch(`https://lsserver-2.onrender.com/api/chat/group`, {
               method: 'POST',
               headers: {
                 'Content-type': 'application/json',

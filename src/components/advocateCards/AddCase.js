@@ -86,7 +86,7 @@ const AddCase = () => {
     e.preventDefault();
     try {
       // Replace with your actual API endpoint
-      const res = await fetch("http://localhost:5000/api/addcase", {
+      const res = await fetch("https://lsserver-2.onrender.com/api/addcase", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

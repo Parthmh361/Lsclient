@@ -61,7 +61,7 @@ const ClientSignUp = () => {
 
     // If password is valid, continue with form submission
     try {
-      const res = await fetch("http://localhost:5000/api/createclient", {
+      const res = await fetch("https://lsserver-2.onrender.com/api/createclient", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

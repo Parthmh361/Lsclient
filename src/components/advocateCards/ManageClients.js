@@ -22,7 +22,7 @@ const ManageClients = () => {
 
   const fetchClients = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/clients');
+      const res = await fetch('https://lsserver-2.onrender.com/api/clients');
       const data = await res.json();
       setClients(data);
     } catch (error) {
@@ -43,7 +43,7 @@ const ManageClients = () => {
 
   const handleDelete = async (clientId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/clients/${clientId}`, {
+      const res = await fetch(`https://lsserver-2.onrender.com/api/clients/${clientId}`, {
         method: 'DELETE',
       });
       if (res.ok) {
